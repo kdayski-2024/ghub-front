@@ -1,0 +1,22 @@
+.DS_Store
+/node_modules
+
+# testing
+/coverage
+
+# production
+/build
+/build-serve
+
+# misc
+.env
+.env.prod
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+package-lock.json
+
+.idea/
+yarn.lock
