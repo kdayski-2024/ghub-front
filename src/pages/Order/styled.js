@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { COLORS } from '../../models/colors';
 
 export const Basket = styled.div`
   margin-top: 40px;
@@ -9,7 +10,7 @@ export const Content = styled.div`
   display: grid;
   grid-template-columns: 1fr 372px;
   gap: 32px;
-`
+`;
 
 export const Button = styled.button`
   padding: 10px 22px;
@@ -36,7 +37,7 @@ export const UserData = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
-`
+`;
 
 export const Offer = styled.div`
   border: 1px solid #e3e1d8;
@@ -47,13 +48,13 @@ export const Offer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-`
+`;
 
 export const Total = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-`
+`;
 
 export const DataItem = styled.div`
   border: 1px solid #e3e1d8;
@@ -63,7 +64,7 @@ export const DataItem = styled.div`
   flex-direction: column;
   gap: 24px;
   background: #f5f4f1;
-`
+`;
 
 export const LocationButton = styled(Button)`
   background-color: #ffffff;
@@ -79,12 +80,51 @@ export const LocationButton = styled(Button)`
 export const Images = styled.div`
   display: flex;
   gap: 12px;
-`
+`;
 
 export const Image = styled.div`
   position: relative;
-`
+`;
 
 export const Amount = styled.div`
   position: absolute;
-`
+`;
+
+export const InputsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+`;
+
+export const YWrapper = styled.div`
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  div {
+    width: 100%;
+  }
+`;
+export const Title = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+`;
+
+export const PaymentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e3e1d8;
+  width: 224px;
+`;
+export const IconWrapper = styled.div`
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+`;
