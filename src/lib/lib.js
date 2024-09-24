@@ -1,3 +1,5 @@
+import { COMMON_ERRORS } from '../helpers/enum';
+
 export const isMobile = function () {
   let isMobile = false;
   (function (a) {
@@ -22,4 +24,22 @@ export const importAllImages = (context) => {
     images[imageName] = context(item).default;
   });
   return images;
+};
+
+export const simplifyErrorMessage = (message) => {
+  const error = COMMON_ERRORS.find((item) => item.error.toLowerCase().includes(message.toLowerCase()));
+  if (error) return error.label;
+  return message;
+};
+
+export const spliceAddress = (address, symbols = 5) => {
+  return address ? address.substr(0, symbols) + '...' + address.substr(address.length - 4, 4) : '';
+};
+
+export const getAddress = (userAddress) => {
+  let address = '';
+  if (userAddress) {
+    address = spliceAddress(userAddress);
+  }
+  return address;
 };

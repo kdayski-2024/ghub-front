@@ -4,7 +4,7 @@ import * as Styled from './styled';
 import * as UI from '../../../../components/index';
 import { COLORS } from '../../../../models/colors';
 
-const Button = ({ count, setCount }) => {
+const Button = ({ count, setCount, ...props }) => {
   const handleIncrement = () => {
     setCount(count + 1);
   };
@@ -23,8 +23,8 @@ const Button = ({ count, setCount }) => {
   };
 
   return (
-    <Styled.Button count={count} onClick={count > 0 ? null : handleIncrement}>
-      {count === 0 ? (
+    <Styled.Button count={count} onClick={count > 0 ? null : handleIncrement} {...props}>
+      {count === 0 && !props.noText ? (
         <UI.Paragraph color={COLORS.WHITE} size={'big'}>
           В КОРЗИНУ
         </UI.Paragraph>
@@ -37,7 +37,7 @@ const Button = ({ count, setCount }) => {
             justifyContent: 'space-between',
           }}
         >
-          <div onClick={handleDecrement} style={{ marginRight: '10px' }}>
+          <div onClick={handleDecrement} style={{ marginRight: '10px', minWidth: '28px' }}>
             <UI.Paragraph color={COLORS.BLACK} size={'large'}>
               -
             </UI.Paragraph>
@@ -54,13 +54,12 @@ const Button = ({ count, setCount }) => {
                 border: 'none',
                 color: COLORS.BLACK,
                 fontSize: 'inherit',
-                border: 'none',
                 outline: 'none',
               }}
             />
-            шт.
+            {!props.noText && 'шт.'}
           </UI.Paragraph>
-          <div onClick={handleIncrement} style={{ marginLeft: '10px' }}>
+          <div onClick={handleIncrement} style={{ marginLeft: '10px', minWidth: '28px' }}>
             <UI.Paragraph color={COLORS.BLACK} size={'large'}>
               +
             </UI.Paragraph>

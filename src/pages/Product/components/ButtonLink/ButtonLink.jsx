@@ -7,7 +7,7 @@ import { COLORS } from '../../../../models/colors';
 
 const ButtonLink = () => {
   const navigate = useNavigate();
-  const handleNavigate = () => {};
+  // const handleNavigate = () => {};
   return (
     <Styled.ButtonLink
       as={Link}

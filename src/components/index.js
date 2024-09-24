@@ -30,6 +30,7 @@ import MenuLink from './MenuLink/MenuLink';
 import ArticleLink from './ArticleLink/ArticleLink';
 import Title from './Title/Title';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
+import { WalletConnectButton } from './WalletConnectButton';
 
 import { Grid, GridElem } from './Grid/styled';
 import { Container } from './Container/styled';
@@ -91,4 +92,5 @@ export {
   LogoIcon,
   LogoIconFooter,
   CloseIcon,
+  WalletConnectButton
 };

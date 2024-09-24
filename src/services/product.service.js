@@ -5,7 +5,7 @@ class ProductService {
   initialState = {
     loading: false,
     error: null,
-    product: [],
+    product: null,
   };
 
   state = this.initialState;

@@ -1,9 +1,9 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 import * as Styled from './styled';
 import * as UI from '../../../../components/index';
-import { COLORS } from '../../../../models/colors';
+// import { COLORS } from '../../../../models/colors';
 
 const CardList = ({ catalog }) => {
   // console.log(catalog);

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLORS } from '../../../../models/colors';
+// import { COLORS } from '../../../../models/colors';
 
 export const ButtonLink = styled.button`
   padding: 10px 22px;

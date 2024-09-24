@@ -1,26 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-import useRoutes from '../../../hooks/useRoutes';
 import * as Styled from '../styled';
 import * as UI from '../../index';
 import Close from '../../../assets/img/icons/cross-purple.svg';
-import { LogoIcon } from '../../';
 
 import { COLORS } from '../../../models/colors';
 
 const BurgerMenu = () => {
-  const { burger } = useRoutes();
-
   const [active, setActive] = useState(false);
-  const BURGER = burger;
   const toggleMenu = () => {
     setActive((prevState) => !prevState);
-  };
-  const navigate = useNavigate();
-  const onNavigate = (path) => {
-    setActive((prevState) => !prevState);
-    navigate(path);
   };
 
   useEffect(() => {

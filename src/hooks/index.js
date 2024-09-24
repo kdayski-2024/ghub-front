@@ -5,6 +5,8 @@ import useRoutes from './useRoutes';
 import useStep from './useStep';
 import useCatalog from './useCatalog';
 import useProduct from './useProduct';
+import useBasket from './useBasket';
+import useWallet from './useWallet';
 
 export {
   useDebounce,
@@ -14,4 +16,6 @@ export {
   useStep,
   useCatalog,
   useProduct,
+  useBasket,
+  useWallet
 };

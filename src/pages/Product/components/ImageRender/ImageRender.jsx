@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
 import * as Styled from './styled';
-import * as UI from '../../../../components/index';
-import { COLORS } from '../../../../models/colors';
+// import * as UI from '../../../../components/index';
+// import { COLORS } from '../../../../models/colors';
 
 const API_LINK = process.env.REACT_APP_API_URL;
 
@@ -33,17 +33,8 @@ const ImageRender = ({ link }) => {
     : {};
 
   return (
-    <Styled.ImageRender
-      onMouseMove={handleMouseMove}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <Styled.Image
-        width={'500px'}
-        height={'600px'}
-        src={`${API_LINK}/${link}`}
-        style={zoomStyle}
-      />
+    <Styled.ImageRender onMouseMove={handleMouseMove} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <Styled.Image width={'500px'} height={'600px'} src={`${API_LINK}/${link}`} style={zoomStyle} />
     </Styled.ImageRender>
   );
 };

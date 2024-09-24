@@ -7,6 +7,7 @@ const Main = lazy(() => import('./pages/Main/Main.jsx'));
 const Catalogue = lazy(() => import('./pages/Catalogue/Catalogue.jsx'));
 const Product = lazy(() => import('./pages/Product/Product.jsx'));
 const Basket = lazy(() => import('./pages/Basket/Basket.jsx'));
+const Order = lazy(() => import('./pages/Order/Order.jsx'));
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
             <Route path="/:parentId" element={<Catalogue />} />
             <Route path="product/:id" element={<Product />} />
             <Route path="basket" element={<Basket />} />
+            <Route path="order" element={<Order />} />
           </Route>
         </Routes>
       </Suspense>
