@@ -15,7 +15,7 @@ class WalletService {
 		chainId: 1,
 		balance: 0,
 		balanceETH: 0,
-		balanceToken: 'ETH',
+		balanceToken: 'USDT',
 		connected: false,
 		connecting: false,
 		isNotEnoughBalance: false,
@@ -120,7 +120,7 @@ class WalletService {
 			if (decimals !== '18') {
 				const delimiter = new BN('10').pow(new BN(String(18 - Number(decimals)))).toString();
 				const value = new BN(String(balance)).mul(new BN(delimiter)).toString();
-				return this.#roundDown(web3.utils.fromWei(value, 'ether'), 6);
+				return this.#roundDown(web3.utils.fromWei(value, 'ether'), 2);
 			}
 		} catch (e) {
 			console.log(e);

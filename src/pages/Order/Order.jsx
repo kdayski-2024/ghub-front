@@ -79,7 +79,7 @@ const Order = () => {
           </Styled.Total>
           <Styled.Button disabled={loading} onClick={handleClick}>
             <UI.Paragraph color={COLORS.WHITE} size={TYPOGRAPHY_SIZE.MEDIUM}>
-              {!connected && 'Покдлючить кошелек'}
+              {!connected && 'Подключить кошелек'}
               {connected && chainId !== 421614 && 'Сменить сеть'}
               {connected && chainId === 421614 && 'Оформить заказ'}
             </UI.Paragraph>

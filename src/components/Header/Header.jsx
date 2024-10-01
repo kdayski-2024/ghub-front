@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import * as Styled from './styled';
 import * as UI from '../index';
@@ -6,8 +6,36 @@ import { COLORS } from '../../models/colors';
 import brick from '../../img/brick_logo.png';
 
 import BurgerMenu from './components/BurgerMenu';
+import { useWallet } from '../../hooks';
+import WalletServiceInstance from '../../services/wallet.service';
 
 const Header = () => {
+  const wallet = useWallet();
+
+  useEffect(() => {
+    if (wallet.connected && wallet.chainId === 421614) {
+      const CHAIN_LIST = [421614];
+      const TOKENS_INFO = {
+        421614: {
+          base: [
+            {
+              symbol: 'WETH',
+              address: '0x5fB5A074a7504C37159E903Ecf412EEbeec231A9',
+            },
+          ],
+          usd: [
+            {
+              symbol: 'USDT',
+              address: '0xc588e6a573E691650Ab01f6Cf01950a606eDB6b5',
+            },
+          ],
+        },
+      };
+      WalletServiceInstance.setBalance({ CHAIN_LIST, TOKENS_INFO }, wallet, 'USDT');
+    }
+    // eslint-disable-next-line
+  }, [wallet.connected, wallet.chainId]);
+
   return (
     <Styled.Header>
       <Styled.LogoLink to={'/'}>
@@ -39,10 +67,7 @@ const Header = () => {
 
       <Styled.BalanceWrapper>
         <UI.Paragraph color={COLORS.BLACK} size={'medium'}>
-          Баланс: 100р
-        </UI.Paragraph>
-        <UI.Paragraph color={COLORS.BLACK} size={'medium'}>
-          Баланс: 100р
+          Баланс: {wallet.balance} {wallet.balanceToken}
         </UI.Paragraph>
       </Styled.BalanceWrapper>
 

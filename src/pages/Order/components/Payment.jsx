@@ -1,4 +1,4 @@
-import React from 'react'; //  { useEffect, useState }
+import React from 'react';
 
 import * as Styled from '../styled';
 import * as UI from '../../../components/index';
@@ -19,9 +19,9 @@ const Payment = () => {
           WEB3
         </UI.Paragraph>
         <Styled.IconWrapper>
-          <img src={MetaMaskIcon} />
-          <img src={Tonkeeper} />
-          <img src={Walletconnect} />
+          <img src={MetaMaskIcon} alt="metamask" />
+          <img src={Tonkeeper} alt="tonkeeper" />
+          <img src={Walletconnect} alt="walletconnect" />
         </Styled.IconWrapper>
       </Styled.PaymentWrapper>
     </Styled.DataItem>

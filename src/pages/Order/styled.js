@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { COLORS } from '../../models/colors';
 
 export const Basket = styled.div`
   margin-top: 40px;
